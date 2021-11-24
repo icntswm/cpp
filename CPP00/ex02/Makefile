@@ -10,7 +10,7 @@ OBJ = $(SRC:cpp=o)
 
 CC = g++
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 $(NAME): $(OBJ)
 		$(CC) $(FLAGS) -o $(NAME) $(OBJ)
