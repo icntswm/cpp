@@ -1,5 +1,5 @@
 #ifndef KAREN_H
-# define RAKEN_H
+# define KAREN_H
 # include <iostream>
 
 class Karen
