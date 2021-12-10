@@ -1,6 +1,6 @@
 .PHONY: all clean fclean re
 
-NAME = fixed
+NAME = bsp
 
 SRC	= main.cpp Fixed.cpp Point.cpp bsp.cpp
 
