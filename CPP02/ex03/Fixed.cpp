@@ -1,5 +1,17 @@
 #include "Fixed.hpp"
 
+int	twoInPow(int num)
+{
+	int i = 0;
+	int res = 2;
+	while (i <= num)
+	{
+		res <<= 1;
+		i++;
+	}
+	return (res);
+}
+
 Fixed::Fixed() : m_fix_num(0)
 {
 //	std::cout << "Default constructor called" << std::endl;
@@ -13,14 +25,14 @@ Fixed::Fixed(const Fixed &f1) : m_fix_num(f1.m_fix_num)
 Fixed::Fixed(const float num)
 {
 	//std::cout << "Float constructor called" << std::endl;
-	m_fix_num = 1024 * num;
+	m_fix_num = twoInPow(this->m_bit) * num;
 }
 
 Fixed::Fixed(int num)
 {
 //	std::cout << "Int constructor called " << std::endl;
 //	m_fix_num = num;
-	m_fix_num = 1024 * num;
+	m_fix_num = twoInPow(this->m_bit) * num;
 }
 
 
@@ -43,12 +55,12 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat() const
 {
-	return (static_cast<float>(m_fix_num) / 1024);
+	return (static_cast<float>(m_fix_num) / twoInPow(this->m_bit));
 }
 
 int Fixed::toInt() const
 {
-	return (m_fix_num / 1024);
+	return (m_fix_num / twoInPow(this->m_bit));
 }
 
 Fixed &Fixed::operator=(const Fixed &f1)
