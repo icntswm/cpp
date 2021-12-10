@@ -12,8 +12,6 @@ public:
     Point(float x1);
     Point(const Point &p1);
     Point(const float x1, const float y1);
-    Point &operator=(const Point &p1);
-    // float pfloatFixed(const Fixed &f);
     float returnFixed(int fix) const;
     ~Point();
 };

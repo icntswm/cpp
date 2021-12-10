@@ -20,12 +20,6 @@ Point::Point(const float x1, const float y1) : x(x1), y(y1)
     // std::cout << "Point float2 constructor called" << std::endl;
 }
 
-Point& Point::operator=(const Point &p1)
-{
-    // std::cout << "OPerator = is called" << std::endl;
-    *this = p1; 
-    return (*this);
-}
 Point::Point(const Point &p1) : x(p1.x), y(p1.y)
 {
 	// std::cout << "Copy constructor called" << std::endl;

@@ -2,12 +2,12 @@
 
 bool bsp(Point const first, Point const second, Point const third, Point const point);
 
-int main( void )
+int main()
 {
-	Point first(5.4f);
-	Point second(0, 5);
-	Point third(5, 0);
-	Point point(5.4f, 0.1f); 
+	Point first(5.4f, 0.2f);
+	Point second(0, 0);
+	Point third(5.4f);
+	Point point(5.38f, 0.2f); 
 	
 	std::cout << "The vertices of the triangle:" << std::endl; 
 	std::cout << "xy(first): " << first << std::endl;
@@ -18,5 +18,5 @@ int main( void )
 		std::cout << "The point is inside the triangle - TRUE" << std::endl;
 	else
 		std::cout << "The point is outside the triangle - FALSE" << std::endl;
-	return 0;
+	return (0);
 }
