@@ -34,7 +34,7 @@ Cat		&Cat::operator=(const Cat &c)
 {
     std::cout << "Cat assignment" << std::endl;
 	this->type = c.getType();
-	*(this->brain) = *(c.getBrain());
+	*this->brain = *c.getBrain();
 	return (*this);
 }
 
@@ -42,6 +42,6 @@ Animal	&Cat::operator=(const Animal &a)
 {
     std::cout << "Animal assignment" << std::endl;
 	this->type = a.getType();
-	*(this->brain) = *(a.getBrain());
+	*this->brain = *a.getBrain();
 	return (*this);
 }

@@ -34,7 +34,7 @@ Dog		&Dog::operator=(const Dog &d)
 {
     std::cout << "Dog assignment" << std::endl;
 	this->type = d.getType();
-	*(this->brain) = *(d.getBrain());
+	*this->brain = *d.getBrain();
 	return (*this);
 }
 
@@ -42,6 +42,6 @@ Animal	&Dog::operator=(const Animal &a)
 {
     std::cout << "Animal assignment" << std::endl;
 	this->type = a.getType();
-	*(this->brain) = *(a.getBrain());
+	*this->brain = *a.getBrain();
 	return (*this);
 }
