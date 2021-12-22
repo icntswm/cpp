@@ -1,7 +1,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-void    make_ideas(Animal *animals[], int number)
+void    make_ideas(AAnimal *animals[], int number)
 {
     int i;
     Brain *brain;
@@ -44,8 +44,7 @@ int main()
 {
     int i;
     int number = 6;
-    Animal* animals[number];
-
+    AAnimal *animals[number];
     i = 0;
     while (i < number)
     {
@@ -61,6 +60,8 @@ int main()
     animals[2]->makeSound();
     animals[4]->makeSound();
     std::cout << "----------------------------" << std::endl;
+    //abstract class
+    // AAnimal *animal = new AAnimal();
     i = 0;
     while (i < number)
         delete animals[i++];

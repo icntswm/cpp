@@ -7,7 +7,7 @@ Cat::Cat()
     brain = new Brain();
 }
 
-Cat::Cat(const Cat &c) : Animal(c)
+Cat::Cat(const Cat &c) : AAnimal(c)
 {
     std::cout << "\033[35m" << "Cat " << "\033[0m" << "constructor called(copy)" << std::endl;
     *this = c;
@@ -38,9 +38,9 @@ Cat		&Cat::operator=(const Cat &c)
 	return (*this);
 }
 
-Animal	&Cat::operator=(const Animal &a)
+AAnimal	&Cat::operator=(const AAnimal &a)
 {
-    std::cout << "Animal assignment" << std::endl;
+    std::cout << "AAnimal assignment" << std::endl;
 	this->type = a.getType();
 	*this->brain = *a.returnBrain();
 	return (*this);

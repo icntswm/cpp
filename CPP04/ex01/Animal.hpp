@@ -11,7 +11,7 @@ public:
     virtual ~Animal();
     virtual Animal& operator=(const Animal &a);
     virtual void makeSound() const;
-    virtual Brain* getBrain() const = 0;
+    virtual Brain* returnBrain() const = 0;
     const std::string& getType() const;
 protected:
     std::string type;

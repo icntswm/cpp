@@ -7,7 +7,7 @@ Dog::Dog()
     brain = new Brain();
 }
 
-Dog::Dog(const Dog &d) : Animal(d)
+Dog::Dog(const Dog &d) : AAnimal(d)
 {
     std::cout << "\033[36m" << "Dog " << "\033[0m" << "constructor called(copy)" << std::endl;
     *this = d;
@@ -38,9 +38,9 @@ Dog		&Dog::operator=(const Dog &d)
 	return (*this);
 }
 
-Animal	&Dog::operator=(const Animal &a)
+AAnimal	&Dog::operator=(const AAnimal &a)
 {
-    std::cout << "Animal assignment" << std::endl;
+    std::cout << "AAnimal assignment" << std::endl;
 	this->type = a.getType();
 	*this->brain = *a.returnBrain();
 	return (*this);
