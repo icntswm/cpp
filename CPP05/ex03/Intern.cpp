@@ -10,8 +10,6 @@ Intern::~Intern()
     std::cout << "Intern destructor called" << std::endl;
 }
 
-// Form* searchForm
-
 Form* Intern::makeForm(const std::string &formname, const std::string &target) const
 {
     std::string forms[3] = {"shrubbery", "robotomy", "president"};
@@ -30,7 +28,7 @@ Form* Intern::makeForm(const std::string &formname, const std::string &target) c
         {
             std::cout << "Intern created " << save->getFormName() << std::endl;
             int j = 0;
-            while (form[j])
+            while (j < 4)
             {
                 if (j == i)
                     j++;
@@ -41,7 +39,7 @@ Form* Intern::makeForm(const std::string &formname, const std::string &target) c
     catch(const char *err)
     {
         int j = 0;
-        while (form[j])
+        while (j < 4)
             delete form[j++];
         std::cerr << "\033[31m" << err << "\033[0m" << '\n';
     }  

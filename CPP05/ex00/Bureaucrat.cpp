@@ -40,10 +40,7 @@ void Bureaucrat::plusGrade(int plGr)
     this->_grade -= plGr;
     std::cout << "plusGrade for " << "\033[33m" << _name << "\033[0m" << " called";
     if (this->_grade < this->_hightGrade)
-    {
-        std::cout << std::endl << "\033[31m" << "ERROR!" << "\033[0m" << std::endl;
         throw (Bureaucrat::GradeTooHighException());
-    }
     else
         std::cout << ". His grade: " << "\033[34m" << this->getGrade() << "\033[0m" << std::endl;
 }
@@ -53,10 +50,7 @@ void Bureaucrat::minusGrade(int msGr)
     this->_grade += msGr;
     std::cout << "minusGrade for " << "\033[33m" << _name << "\033[0m" << " called";
     if (this->_grade > this->_lowGrade)
-    {
-        std::cout << std::endl << "\033[31m" << "ERROR!" << "\033[0m" << std::endl;
         throw (Bureaucrat::GradeTooLowException());
-    }
     else
         std::cout << ". His grade: " << "\033[34m" << this->getGrade() << "\033[0m" << std::endl;
 }

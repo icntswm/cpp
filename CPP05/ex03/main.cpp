@@ -7,13 +7,20 @@ int main()
     Bureaucrat mike("mike", 2);
     Form *rrf;
 
-    rrf = someRandomIntern.makeForm("robotomt", "lol");
+    rrf = someRandomIntern.makeForm("qwerty", "tree");
     if (rrf)
         delete rrf;
     rrf = someRandomIntern.makeForm("shrubbery", "new_year");
     try
     {
         rrf->beSigned(mike);
+        rrf->execute(mike);
+        if (rrf)
+            delete rrf;
+        std::cout << "----------------------------" << std::endl;
+        rrf = someRandomIntern.makeForm("president", "Billy");
+        rrf->beSigned(mike);
+        mike.minusGrade(100);
         rrf->execute(mike);
     }
     catch(const std::exception& e)
@@ -22,5 +29,6 @@ int main()
     }
     if (rrf)
         delete rrf;
+    
     return (0);
 }

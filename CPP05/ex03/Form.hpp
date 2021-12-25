@@ -38,7 +38,7 @@ public:
         public:
             virtual const char* what() const throw()
             {
-                return ("Grade too low to sign/execute(minimum 150)");
+                return ("Error: Grade too low to sign/execute(minimum 150)");
             }
     };
      class LoseExecute : public std::exception
@@ -46,7 +46,7 @@ public:
         public:
             virtual const char* what() const throw()
             {
-                return ("The form cannot be completed because it is \
+                return ("Error: The form cannot be completed because it is \
 either not signed or the bureaucrat has a low grade");
             }
     };
