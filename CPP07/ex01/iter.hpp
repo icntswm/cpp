@@ -3,15 +3,13 @@
 # include <iostream>
 
 template <typename T>
-void    iter(T *adress, int lenght, void(*function)(T))
+void    iter(T *adress, int lenght, void(*function)(const T &))
 {
     int i;
 
     i = 0;
     while (i < lenght)
         function(adress[i++]);
-    // while (i < lenght)
-    //     std::cout << "return: " << function(adress[i++]) << std::endl;
 }
 
 #endif
