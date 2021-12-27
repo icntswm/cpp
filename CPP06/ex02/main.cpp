@@ -32,17 +32,24 @@ void identify(Base *p)
     B *b;
     C *c;
 
-    a = dynamic_cast<A *>(p);
-    b = dynamic_cast<B *>(p);
-    c = dynamic_cast<C *>(p);
-    std::cout << "\033[33m";
-    if (a)
-        std::cout << "this is class A" << std::endl;
-    else if (b)
-        std::cout << "this is class B" << std::endl;
-    else if (c)
-        std::cout << "this is class C" << std::endl;
-    std::cout << "\033[0m";
+    if (p)
+    {
+        a = dynamic_cast<A *>(p);
+        b = dynamic_cast<B *>(p);
+        c = dynamic_cast<C *>(p);
+        std::cout << "\033[33m";
+        if (a)
+            std::cout << "this is class A" << std::endl;
+        else if (b)
+            std::cout << "this is class B" << std::endl;
+        else if (c)
+            std::cout << "this is class C" << std::endl;
+        std::cout << "\033[0m";
+    }
+    else
+    {
+        std::cout << "is NULL\n";
+    }
 }
 
 void identify(Base &p)
