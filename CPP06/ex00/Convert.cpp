@@ -127,6 +127,8 @@ void    Convert::printConvert() const
     std::cout << "\033[33m" << "char: " << "\033[0m";
     if (_sym >= 32 && _sym <= 126)
         std::cout << "\'" << _sym << "\'" << std::endl;
+    else if (_num_i > INT_MAX || _num_i < INT_MIN)
+        std::cout << "impossible" << std::endl;
     else
         std::cout << "Non displayable" << std::endl;
     std::cout << "\033[33m" << "int: " << "\033[0m";

@@ -1,6 +1,8 @@
 #ifndef CONVERT_H
 # define CONVERT_H
 # include <iostream>
+# include <climits>
+# include <stdlib.h>
 
 class Convert
 {
